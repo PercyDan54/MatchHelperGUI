@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "path": "MatchHelperGUI.sln",
+    "projects": [
+      "MatchHelperGUI.Game\\MatchHelperGUI.Game.csproj",
+      "MatchHelperGUI.Resources\\MatchHelperGUI.Resources.csproj",
+      "MatchHelperGUI.iOS\\MatchHelperGUI.iOS.csproj"
+    ]
+  }
+}
