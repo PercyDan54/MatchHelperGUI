@@ -3,7 +3,6 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\M.Resources\M.Resources.csproj" />
     <ProjectReference Include="..\MatchHelperGUI.Resources\MatchHelperGUI.Resources.csproj" />
   </ItemGroup>
   <ItemGroup>

@@ -29,7 +29,6 @@ namespace MatchHelperGUI.Game
         private void load()
         {
             Resources.AddStore(new DllResourceStore(typeof(MatchHelperGUIResources).Assembly));
-            Resources.AddStore(new DllResourceStore(M.Resources.MResources.ResourceAssembly));
             AddFont(Resources, "Fonts/Harmony");
         }
     }
