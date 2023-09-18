@@ -19,8 +19,7 @@ namespace MatchHelperGUI.Game
         {
             InternalChild = new FillFlowContainer
             {
-                Width = 1245,
-                Height = 700,
+                RelativeSizeAxes = Axes.Both,
                 Direction = FillDirection.Vertical,
                 Margin = new MarginPadding(10),
                 Spacing = new Vector2(0, 5),

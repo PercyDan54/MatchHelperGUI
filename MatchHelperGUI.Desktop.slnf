@@ -2,9 +2,10 @@
   "solution": {
     "path": "MatchHelperGUI.sln",
     "projects": [
+      "M.Resources\\M.Resources.csproj",
       "MatchHelperGUI.Desktop\\MatchHelperGUI.Desktop.csproj",
-      "MatchHelperGUI.Game\\MatchHelperGUI.Game.csproj",
       "MatchHelperGUI.Game.Tests\\MatchHelperGUI.Game.Tests.csproj",
+      "MatchHelperGUI.Game\\MatchHelperGUI.Game.csproj",
       "MatchHelperGUI.Resources\\MatchHelperGUI.Resources.csproj"
     ]
   }
