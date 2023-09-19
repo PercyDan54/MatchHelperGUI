@@ -30,13 +30,14 @@ public partial class ChatLine : CompositeDrawable
                 new ChatUsername(message.Username)
                 {
                     Width = 120,
-                    //AccentColor = Color4.Aqua
                 },
                 new SpriteText
                 {
                     Text = message.Text,
                     Margin = new MarginPadding { Top = 5 },
-                    Font = OsuFont.Default.With(size: 20),
+                    Font = OsuFont.Default,
+                    Width = 500,
+                    AllowMultiline = true,
                 }
             }
         };

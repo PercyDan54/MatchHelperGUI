@@ -14,35 +14,42 @@ public partial class ChatDisplay : CompositeDrawable
     [BackgroundDependencyLoader]
     private void load()
     {
-        InternalChild = new Container
+        InternalChild = new GridContainer
         {
             RelativeSizeAxes = Axes.Both,
-            Children = new Drawable[]
+            RowDimensions = new[] { new Dimension(GridSizeMode.Relative, 0.95f) },
+            Content = new[]
             {
-                new BasicScrollContainer
+                new Drawable[]
                 {
-                    RelativeSizeAxes = Axes.Both,
-                    Children = new Drawable[]
+                    new BasicScrollContainer
                     {
-                        new Box
+                        RelativeSizeAxes = Axes.Both,
+                        Children = new Drawable[]
                         {
-                            RelativeSizeAxes = Axes.Both,
-                            Colour = Colour4.DarkSalmon.Darken(0.7f)
-                        },
-                        container = new FillFlowContainer
-                        {
-                            AutoSizeAxes = Axes.Both,
-                            Direction = FillDirection.Vertical,
-                            Spacing = new Vector2(0, 15)
-                        },
-                    }
+                            new Box
+                            {
+                                RelativeSizeAxes = Axes.Both,
+                                Colour = Colour4.DarkSalmon.Darken(0.7f)
+                            },
+                            container = new FillFlowContainer
+                            {
+                                AutoSizeAxes = Axes.Both,
+                                Direction = FillDirection.Vertical,
+                                Spacing = new Vector2(0, 15)
+                            },
+                        }
+                    },
                 },
-                new BasicTextBox
+                new Drawable[]
                 {
-                    Anchor = Anchor.BottomCentre,
-                    Origin = Anchor.BottomCentre,
-                    RelativeSizeAxes = Axes.Both,
-                    Size = new Vector2(1, 0.1f)
+                    new BasicTextBox
+                    {
+                        //Anchor = Anchor.BottomCentre,
+                        //Origin = Anchor.BottomCentre,
+                        RelativeSizeAxes = Axes.Both,
+                        //Size = new Vector2(1, 0.1f)
+                    }
                 }
             }
         };
@@ -51,5 +58,6 @@ public partial class ChatDisplay : CompositeDrawable
     public void AddMessage(Message message)
     {
         container.Add(new ChatLine(message));
+        container.Invalidate();
     }
 }

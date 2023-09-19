@@ -1,7 +1,10 @@
 ﻿using System;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace MatchHelperGUI.Game.Chat;
 
+[JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class Message
 {
     public Message(string text, string username)
@@ -12,6 +15,5 @@ public class Message
 
     public string Text { get; set; }
     public string Username { get; set; }
-    public string Color { get; set; }
     public DateTime Date { get; set; }
 }
